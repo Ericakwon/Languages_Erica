@@ -108,7 +108,7 @@ if (currentTime> time1 && currentTime< time2 ) {
     image(img3,0,0,1280,720);
     left(130, 515,190,471,190,557, r, g, b, "left"); 
     right(1175, 515,1115,471,1115,557,r,g,b, "right");
-    semitext(1280,720,0,0,0,a2,"Which way do you want to go?");
+    semitext(0,0,0,a2,"Which way do you want to go?");
   
   //third
   }else if(state=="mom"){
@@ -116,7 +116,7 @@ if (currentTime> time1 && currentTime< time2 ) {
     imageMode(CENTER);
     image(img4,width/2,height/2+100,width/2+100,height*2/3);
     right(1175, 515,1115,471,1115,557,r,g,b, "right");
-    finaltext(1280,720,192,89,221,"I met mom!!!");
+    finaltext(192,89,221,"I met mom!!!");
     println("congratulation!!");
      
    //fourth   
@@ -125,7 +125,7 @@ if (currentTime> time1 && currentTime< time2 ) {
     imageMode(CENTER);
     image(img8,width/2,height*2/3-50);
     left(130, 515,190,471,190,557, r, g, b, "Go back"); 
-    finaltext(1280,720,255,0,0,"I am lost..!!");
+    finaltext(255,0,0,"I am lost..!!");
     println("I am lost..");
 
 
@@ -135,7 +135,7 @@ if (currentTime> time1 && currentTime< time2 ) {
     image(img7,0,0,1280,720);
     left(130, 515,190,471,190,557, r, g, b, "left"); 
     right(1175, 515,1115,471,1115,557,r,g,b, "right");
-    semitext(1280,720,0,0,0,a2,"Which way do you want to go?");
+    semitext(0,0,0,a2,"Which way do you want to go?");
 
  
   }else if(state=="daddy"){
@@ -143,7 +143,7 @@ if (currentTime> time1 && currentTime< time2 ) {
     imageMode(CENTER);
     image(img6,width/2,height/2+70,width/2+80,height*2/3+100); 
     right(1175, 515,1115,471,1115,557,r,g,b, "right");
-    finaltext(1280,720,192,89,221,"I found dad!!!");
+    finaltext(192,89,221,"I found dad!!!");
     println("congratulation!!");
   
 
@@ -152,7 +152,7 @@ if (currentTime> time1 && currentTime< time2 ) {
     imageMode(CENTER);
     image(img8,width/2,height*2/3-50);
     left(130, 515,190,471,190,557, r, g, b, "Go back"); 
-    finaltext(1280,720,255,0,0,"I am lost..!!");
+    finaltext(255,0,0,"I am lost..!!");
     println("I am lost..");
   }
   //title
@@ -164,14 +164,14 @@ if (currentTime> time1 && currentTime< time2 ) {
 
   
   
-void finaltext(int w, int h, int r1, int g1, int b1,String shout){
+void finaltext(int r1, int g1, int b1,String shout){
 
     fill(r1,g1,b1);
     textSize(40);
-    text(shout, w/2, h/5);
+    text(shout, width/2, height/5);
 }
 
-void semitext(int w, int h, int r1, int g1, int b1,String a2,String shout){
+void semitext(int r1, int g1, int b1,String a2,String shout){
 
     println(a2);
     rectMode(CORNER);
@@ -181,7 +181,7 @@ void semitext(int w, int h, int r1, int g1, int b1,String a2,String shout){
     rect(370,ry,550,85);
     fill(r1,g1,b1);
     textSize(30);
-    text(shout, w/2, ry+50);
+    text(shout, width/2, ry+50);
       ry=ry+speed;
     if(ry>0 ){
       speed=speed*1;
