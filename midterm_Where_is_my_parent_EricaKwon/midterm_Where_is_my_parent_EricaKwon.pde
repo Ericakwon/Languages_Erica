@@ -1,5 +1,5 @@
 
-
+int presscolor =0;
 String a2 = "This way???";
 String state= "pregame";
 PImage img1;
@@ -273,4 +273,12 @@ void mousePressed() {
          state="start";
 }
 }
+}
+
+void keyPressed() {
+  if (presscolor==0) {
+    r=random(0, 255); g= random(0, 255); b=random(0, 255);
+  } else {
+     r=255; g= 30; b=100;
+  }
 }
