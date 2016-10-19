@@ -208,7 +208,7 @@ if (currentTime-saveTime> 1000 && currentTime-saveTime< 3500) {
      fill(0, 102, 153);
         fill(255, 0,0);
          textSize(60);
-           text( "she was not my mom!!",width/2,height/2);
+           text( "She was not my mom!!",width/2,height/2);
     }else if(currentTime-saveTime> 3500) {
         fill(255, 0,0);
          textSize(60);
@@ -429,7 +429,7 @@ if (currentTime-saveTime> 1000 && currentTime-saveTime< 3500) {
     background(255);
     image(img13,0,0,1280,720);
     right(1175, 515,1115,471,1115,557,r,g,b, "Go back");
-    semitext(1280,720,0,0,0,a2,"She does not like flower");
+    semitext(1280,720,0,0,0,a2,"My mom does not like a flower");
 
 
  
@@ -542,10 +542,12 @@ void mousePressed() {
 }
 }else if(state=="market3"){
       if(mouseX>=1095 && mouseX<=1195 && mouseY>=447 && mouseY<=550){
+        im=0; 
          state="market4";
                saveTime=currentTime;
          }else if(mouseX>=108 && mouseX<=208 && mouseY>=447 && mouseY<=550){
                   state="lost";
+                   saveTime=currentTime;
                   
 }
 }else if(state=="market4"){
