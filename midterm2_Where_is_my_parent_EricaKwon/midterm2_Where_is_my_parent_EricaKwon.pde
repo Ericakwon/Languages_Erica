@@ -70,11 +70,12 @@ void setup() {
   img13 = loadImage("garden.jpg");
   img14 = loadImage("darkmarket.jpg");
   img15 = loadImage("market4.jpg");
-  img16 = loadImage("woman.jpg");
+  img16 = loadImage("th.jpg");
   img17= loadImage("oldman.png");
   img18 =loadImage("boy.png");
   img19 =loadImage("angry.jpg");
   img20 =loadImage("drunk.png");
+    img21 =loadImage("th1.jpg");
   
 
   
@@ -192,7 +193,7 @@ if (currentTime-saveTime> 1000 && currentTime-saveTime< 3500) {
      fill(0, 102, 153);
       semitext(1280,720,0,0,0,a2,"Wow, There are a lot of people");
      }else if(currentTime-saveTime> time2 ) {
-       semitext(1280,720,0,0,0,a2,"Can we find her?");
+       semitext(1280,720,0,0,0,a2,"go inside?");
   
     left(130, 515,190,471,190,557, r, g, b, "Yes"); 
     right(1175, 515,1115,471,1115,557,r,g,b, "Go outside");
@@ -212,7 +213,10 @@ if (currentTime-saveTime> 1000 && currentTime-saveTime< 3500) {
         fill(255, 0,0);
          textSize(60);
            text( "I am so scared!!!",width/2,height/2);
-
+           noStroke();
+            rectMode(CENTER);
+             fill(255);  
+               rect(184,578,215,30); 
      left(130, 515,190,471,190,557, r, g, b, "Find other places"); 
       right(1175, 515,1115,471,1115,557,r,g,b, "Go back");
 
@@ -231,7 +235,11 @@ if (currentTime-saveTime> 1000 && currentTime-saveTime< 3500) {
             semitext(1280,720,0,0,0,a2,"Look! She looks like my mom!");
      }else if(currentTime-saveTime> time3 ) {
         semitext(1280,720,0,0,0,a2,"We need to follow her!");
-     
+         noStroke();
+  rectMode(CENTER);
+  fill(255);  
+  rect(184,578,215,30);
+  
       left(130, 515,190,471,190,557, r, g, b, "go to the other way"); 
     right(1175, 515,1115,471,1115,557,r,g,b,"Follow her");
     
@@ -240,11 +248,18 @@ if (currentTime-saveTime> 1000 && currentTime-saveTime< 3500) {
    }else if(state=="mom"){
     background(255);
     imageMode(CENTER);
+    
+        if(currentTime-saveTime> time1 && currentTime-saveTime< time2 ) {
+          textSize(100);
+          fill(200,50,50);
+            text("There is my mom!!!!",width/2,height/2);
+     }else if(currentTime-saveTime> time2 ) {
+
     image(img4,width/2,height/2+100,width/2+100,height*2/3);
     finaltext(1280,720,192,89,221,"I met mom!!! Thank you");
     println("congratulation!!");
-        right(1175, 515,1115,471,1115,557,r,g,b, "right");
-     
+        right(1175, 515,1115,471,1115,557,r,g,b, "Go back");
+     }  
    //fourth   
   }else if (state=="lost"){
     background(255);
@@ -305,7 +320,7 @@ if (currentTime-saveTime> 1000 && currentTime-saveTime< 3500) {
     image(img12,0,0,1280,720);
          if(currentTime-saveTime> time1 && currentTime-saveTime< time2 ) {
           fill(0, 102, 153);
-            semitext(1280,720,0,0,0,a2,"Look there are three people");
+            semitext(1280,720,0,0,0,a2,"Look!! there are three people");
      }else if(currentTime-saveTime> time2 ) {
         semitext(1280,720,0,0,0,a2,"we can ask them!");
         left(130, 515,190,471,190,557, r, g, b, "Go out"); 
@@ -325,20 +340,20 @@ if (currentTime-saveTime> 1000 && currentTime-saveTime< 3500) {
         textAlign(CORNER);
     fill(0);
     textSize(30);
-    text("Excuse me, do you know where my mom is?",300,900,400,1100);
+    text("Excuse me, do you know where my mom is?",300,800,400,1000);
      }else if(currentTime-saveTime> time2 && currentTime-saveTime< time3 ){
        textAlign(CORNER);
          fill(0);
     textSize(30);
-    text("She has a brown hair and wares a pink dress",300,900,400,1100);
+    text("She has a dark color hair and wares a pink dress",300,800,400,1000);
      }else if (currentTime-saveTime> time3 && currentTime-saveTime< time4){
     fill(0,200,100);
     textSize(30);
-    text("I don't know",1000,900,1100,1100);
+    text("I don't know",1000,800,1100,1000);
     }else if (currentTime-saveTime> time4 ){
     fill(0,200,100);
     textSize(30);
-    text("I am busy",1000,900,1100,1100);
+    text("I am busy",1000,800,1100,1000);
     left(130, 515,190,471,190,557, r, g, b, "Go back"); 
     right(1175, 515,1115,471,1115,557,r,g,b, "Ask one more");
 
@@ -361,25 +376,29 @@ if (currentTime-saveTime> 1000 && currentTime-saveTime< 3500) {
   }else if(state=="woman"){
     imageMode(CENTER);
     background(255);
-    image(img16,width/2,height*2/3,200,500);
+    
      if(currentTime-saveTime> time1 && currentTime-saveTime< time2 ) {
+       image(img16,width/2,height/2,500,500);
         textAlign(CORNER);
     fill(0);
     textSize(30);
-    text("Excuse me, do you know where my mom is?",300,900,400,1100);
+    text("Excuse me, do you know where my mom is?",300,800,400,1000);
      }else if(currentTime-saveTime> time2 && currentTime-saveTime< time3 ){
+       image(img16,width/2,height/2,500,500);
        textAlign(CORNER);
          fill(0);
     textSize(30);
-    text("She has a brown hair and wares a pink dress",300,900,400,1100);
+    text("She has a dark color hair and wares a pink dress",300,800,400,1000);
      }else if (currentTime-saveTime> time3 && currentTime-saveTime< time4){
+       image(img16,width/2,height/2,500,500);
       fill(0,200,100);
       textSize(30);
-      text("Ummm...",1000,900,1100,1100);
-      }else if (currentTime-saveTime> time3){
-      fill(0,200,100);
-      textSize(30);
-      text("I saw a woman who was looking for a child in the market",1000,900,300,1100);
+      text("Ummm...",1000,800,1100,1000);
+      }else if (currentTime-saveTime> time4){
+        image(img21,width/2,height/2,600,600);
+         fill(0,200,100);
+           textSize(30);
+             text("I saw a woman who is looking for a child in the market",1000,800,300,1000);
       right(1175, 515,1115,471,1115,557,r,g,b, "Go back");
 
     }
@@ -391,16 +410,16 @@ if (currentTime-saveTime> 1000 && currentTime-saveTime< 3500) {
         textAlign(CORNER);
     fill(0);
     textSize(30);
-    text("Excuse me, do you know where my mom is?",300,900,400,1100);
+    text("Hi~, do you know where my mom is?",300,800,400,1000);
      }else if(currentTime-saveTime> time2 && currentTime-saveTime< time3 ){
        textAlign(CORNER);
          fill(0);
     textSize(30);
-    text("She has a brown hair and wares a pink dress",300,900,400,1100);
+    text("She has a dark color hair and wares a pink dress",300,800,400,1000);
      }else if (currentTime-saveTime> time3 ){
       fill(0,200,100);
       textSize(30);
-      text("Sorry..I lost my mom, too",1000,900,300,1100);
+      text("Sorry..I lost my mom, too",1000,800,300,1000);
      right(1175, 515,1115,471,1115,557,r,g,b, "Go back");
 
      }
@@ -535,6 +554,7 @@ void mousePressed() {
                saveTime=currentTime;
          }else if(mouseX>=108 && mouseX<=208 && mouseY>=447 && mouseY<=550){
                   state="mom";
+                  saveTime=currentTime;
                   
 }
 }else if(state=="darkmarket"){
