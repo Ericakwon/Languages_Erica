@@ -25,9 +25,9 @@ void setup() {
 
   size(600, 600);
 
-  song1=new SoundFile(this, "s1.wav");
-  song2=new SoundFile(this, "s2.wav");
-  song3=new SoundFile(this, "s3.wav");
+  song1=new SoundFile(this, "s1.mp3");
+  song2=new SoundFile(this, "s2.mp3");
+  song3=new SoundFile(this, "s3.mp3");
 
   ana=new Amplitude(this);
   ana.input(song1);
