@@ -126,7 +126,7 @@ number= number+1.2;
     noFill();
   }
   strokeWeight(2);
- ellipse(move, 0, 50, 50);
+  ellipse(move, 0, 50, 50);
   ellipse(move, 100, 50, 50);
   ellipse(move, 200, 50, 50);
   ellipse(move, 300, 50, 50);
@@ -151,15 +151,6 @@ number= number+1.2;
 
   
   }
-
-void mousePressed(){
-  
-  
-  
-}
-
-
-
 
   void keyPressed() {
     println("winter is coming!!!!");
