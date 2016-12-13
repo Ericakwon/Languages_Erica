@@ -143,13 +143,11 @@ number= number+1.2;
   ellipse(move-600, 700, 30, 30);
   ellipse(move-600, 800, 30, 30);
   
- strokeWeight(0);
- frameRate(60);
+  strokeWeight(0);
+  frameRate(60);
   ellipse(move-1100, 100, 250, 250);
   ellipse(move-1100, 400, 250, 250);
   ellipse(move-1100, 700, 250, 250);
-
-  
   }
 
   void keyPressed() {
