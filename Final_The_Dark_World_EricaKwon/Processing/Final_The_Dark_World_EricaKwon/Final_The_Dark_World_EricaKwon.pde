@@ -1,3 +1,6 @@
+//Title: the dark world
+//Erica Kwon
+
 import processing.sound.*;
 SoundFile file;
 
@@ -12,6 +15,11 @@ PImage img2;
 PImage img3;
 PImage img4;
 PImage img5;
+
+
+// All Images, trees and even text should have different saveTime and currentTime
+//to work separately. If they have same saveTime, some of them work together.
+//So i made lots of saveTimes. 
 
 int speed =1;
 int time1= 800;
