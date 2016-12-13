@@ -1,5 +1,5 @@
 //Title : The colorful plates 
-//Artist : by Erica Kwon
+//Erica Kwon
 
 void setup(){
   size (1080,720);
