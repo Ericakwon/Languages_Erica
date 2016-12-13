@@ -1,3 +1,6 @@
+//Title : Changes
+//Erica Kwon
+
 Snow[] snows= new Snow[200];
 Line[] lines= new Line[50];
 Rect[] rects= new Rect[30];
