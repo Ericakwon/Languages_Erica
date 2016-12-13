@@ -1,7 +1,7 @@
-//Dawon Erica Kwon
-// Title : Click me
-//there are four different designs, so you can click 
-//each other * the last one, you should click right mouse button.
+//Title : Click me
+//Erica Kwon
+//there are four different designs, so you can click them
+
 
 
 boolean button=false;
