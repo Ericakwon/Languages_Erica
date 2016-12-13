@@ -56,26 +56,39 @@ void draw(){
  
   fill(255);
   ellipse(100,height/2,x+20,y+20);
+  
   rect(300,height/2-10,d+20,e+20);
+  textAlign(CENTER);
+  stroke(0);
+  textSize(10);
+  text("mouse Pressed",310,height/2-20);
+  
   noFill();
   stroke(100);
   strokeWeight(2);
   ellipse(500,height/2,f+20,h+20);
-    strokeWeight(4);
-    rect(700,height/2-10,i+16,j+16);
   
-  float r=random(0,255);
+  
+  strokeWeight(4);
+  rect(700,height/2-10,i+16,j+16);
+  textAlign(CENTER);
+  stroke(0);
+  textSize(10);
+  fill(0);
+  text("mouse Pressed",708,height/2-20);
+  
+float r=random(0,255);
 float g=random(0,255);
 float b=random(0,255);
 float a=random(0,255);
   if(mouseX>80 && mouseX<120 && mouseY>height/2-20 && mouseY<height/2+20){
     button=true;
-  }else{
+    }else{
     button=false;
-  } if(button){
+    } if(button){
     x=x+2;
     y=y+2;
-  }else{
+    }else{
     x=0;
     y=0;
   }if(x>100){
@@ -91,17 +104,14 @@ float a=random(0,255);
      ellipse(100,600,x,y);
      ellipse(100,400,x,y);
   }
+  
   if(mouseX>300 && mouseX<320 && mouseY>height/2-10 && mouseY<height/2+20){
-    button=true;
-  }else{
-    button=false;
-  }if(button){
-    noStroke();
- fill(0);
- rect(x1,y1,20,20);
+   noStroke();
+   fill(0);
+   rect(x1,y1,20,20);
  
-//first
- if(state==0){
+
+   if(state==0){
    x1=x1+speed*5;
    if(x1>380){
      x1=380;
@@ -120,72 +130,66 @@ float a=random(0,255);
      state=3;
      }
    }else if(state==3){
-   y1=y1-speed;
-   if(y1<0){
-  y1=0;
-   state=0;
+    y1=y1-speed;
+    if(y1<0){
+    y1=0;
+    state=0;
    }
    }
    }
   
-//second
+
  if(mousePressed){
    if(mouseX>300 && mouseX<320 && mouseY>height/2-10 && mouseY<height/2+20){
-     stroke(255);
+   stroke(255);
    fill(81,199,198);
    rect(x2,y2,10,10);
    rect(x3*3,y3*3,40,40);
    rect(x4,y4,25,25);
-   rect(x5*2,y5*2,30,30);
  if(state==0){
    x2=x2+speed*3;
    x3=x3+speed*2;
    x4=x4+speed*4;
-   x5=x5+speed*2;
    if(x2>500 && x3>200 && x4>600 && x5>140 ){
      x2=500;
      x3=200;
      x4=600;
-     x5=140;
      state=1;
    }
    }else if(state==1){
    y2=y2+speed*3;
    y3=y3+speed*5;
    y4=y4+speed*2;
-   y5=y5+speed*3;
+
    if(y2>height-10 && y3>height-40 && y4>height-25 && y5>height-30){
      y2=height-10;
       y3=height-40;
        y4=height-25;
-        y5=height-30;
+    
      state=2;
    }
    }else if(state==2){
      x2=x2-speed*3;
      x3=x3-speed*3;
      x4=x4-speed*5;
-     x5=x5-speed*7;
+     
      if(x2<300 && x3<100 && x4<300 && x2<40){
      x2=300;
      x3=100;
       x4=300;
-       x5=40;
+
        
      state=3;
      }
-   }else if(state==3){
-   y2=y2-speed;
-   y3=y3-speed;
-   y4=y4-speed;
-   y5=y5-speed;
-   if(y2<0 && y3<0 && y4<0 && y5<0){
+     }else if(state==3){
+     y2=y2-speed;
+     y3=y3-speed;
+     y4=y4-speed;
+ if(y2<0 && y3<0 && y4<0){
   y2=0;
   y3=0;
   y4=0;
-  y5=0;
-  
-   state=0;
+  state=0;
    }
    }
    }
@@ -194,77 +198,53 @@ if(mouseX>400 && mouseX<600 && mouseY>0 && mouseY<height){
      button=true;
      if(button){
      stroke(0);
-strokeWeight(1);
+      strokeWeight(1);
    }
-   for(int q=0;q<height;q+=20){
-line(400,q,600,q);
-   }if(mouseX>400 && mouseY<200){
-     strokeWeight(0);
+    for(int q=0;q<height;q+=20){
+    line(400,q,600,q);
+}if(mouseX>400 && mouseY<200){
+  strokeWeight(0);
   fill(255,210,0,a);
   rect(400,0,200,200);
 }else if (mouseX>400 && mouseY>200 && mouseY<400){
-    strokeWeight(0);
+  strokeWeight(0);
   fill(251,22,194,a);
   rect(400,200,200,200);
 }else if (mouseX>400 && mouseY>400 && mouseY<600){
-    strokeWeight(0);
+  strokeWeight(0);
   fill(239,90,44,a);
   rect(400,400,200,200);
 }else if(mouseX>400 &&mouseY>600){
-    strokeWeight(0);
-fill(r,g,b,a);
-rect(400,600,200,200);
+  strokeWeight(0);
+  fill(r,g,b,a);
+  rect(400,600,200,200);
 }
 }
 
 if(mousePressed){
-  if(mouseButton==RIGHT){
+  if(mouseX>700&&mouseX<716&&mouseY>height/2-10&&mouseY<height/2+20){
    fill( r, g, b);
-
- strokeWeight(2);
-  frameRate(5);
-  fill(r,g,b,a);
-  ellipse(700, 400, r, g+50);
+   strokeWeight(2);
+   frameRate(5);
+   fill(r,g,b,a);
+   ellipse(700, 400, r, g+50);
    ellipse(500, 400, r, g+100);
-    ellipse(300, 400, r+30, g);
-     ellipse(100, 400, r+10, g);
-     frameRate(50);
-  fill(r,g,b,a);
-  ellipse(700, 400, r, g+50);
+   ellipse(300, 400, r+30, g);
+   ellipse(100, 400, r+10, g);
+   frameRate(50);
+  
+   fill(r,g,b,a);
+   ellipse(700, 400, r, g+50);
    ellipse(500, 400, r, g+100);
-    ellipse(300, 400, r+30, g);
-     ellipse(100, 400, r+10, g);
-       
+   ellipse(300, 400, r+30, g);
+   ellipse(100, 400, r+10, g);
   }
   }
+  }
 
-  fill(0);
-  String s="Dawon Erica Kwon";
-  text(s,20,20);
-    fill(0);
-  String e="ClicK Me";
-  text(e,20,35);
-   String o="please click and press each small shapes and the last rectangular, you should click rignt side mouse button :)";
-  text(o,20,50);
-}
 
  
 
 void keyPressed(){
 background(r,g,b,a);  
-}
-
-
-
-
-
-void mousePressed(){
-
-  fill(255);
-     ellipse(100,height/2,x+20,y+20);
-    x=0;
-    y=0;
-    
-    
-
 }
